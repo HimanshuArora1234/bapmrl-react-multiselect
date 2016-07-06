@@ -1,5 +1,5 @@
 {
-  "name": "bapmrl-react-multiselect",
+  "name": "bapmrl-react-multiselect-ie",
   "version": "1.1.3",
   "description": "React Multiselect Component",
   "main": "src/Multiselect.js",
@@ -10,13 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bapmrl/bapmrl-react-multiselect.git"
+    "url": "git+https://github.com/HimanshuArora1234/bapmrl-react-multiselect.git"
   },
   "keywords": [
     "react",
-    "multiselect"
+    "multiselect",
+	"ie11"
   ],
-  "author": "Baptiste Morelle",
+  "author": "Baptiste Morelle & Himanshu Arora",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bapmrl/bapmrl-react-multiselect/issues"

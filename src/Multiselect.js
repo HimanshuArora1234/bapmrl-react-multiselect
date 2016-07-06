@@ -135,7 +135,7 @@ export default class Multiselect extends Component {
   _handleDocumentMouseDown(e) {
     const inputNode = ReactDOM.findDOMNode(this.refs.input);
     const itemsNode = ReactDOM.findDOMNode(this.refs.items);
-    if (!e.path.find(n => n === inputNode || n === itemsNode)) {
+    if (e && e.path && !e.path.find(n => n === inputNode || n === itemsNode)) {
       inputNode.blur();
       this.setState({
         focus: false,
@@ -143,9 +143,17 @@ export default class Multiselect extends Component {
         filteredItems: this._normalizedItems,
         filterInputValue: ''
       });
-    } else if (e.path.find(n => n === itemsNode)) {
+    } else if (e && e.path && e.path.find(n => n === itemsNode)) {
       e.preventDefault();
-    }
+    } else if(this.state.open) {
+	  inputNode.blur();
+      this.setState({
+        focus: false,
+        open: false,
+        filteredItems: this._normalizedItems,
+        filterInputValue: ''
+      });
+	}
   }
 
   _handleInputArrowDown(e) {

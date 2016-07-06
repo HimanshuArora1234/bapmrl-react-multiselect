@@ -146,14 +146,14 @@ export default class Multiselect extends Component {
     } else if (e && e.path && e.path.find(n => n === itemsNode)) {
       e.preventDefault();
     } else if(this.state.open) {
-        inputNode.blur();
-        this.setState({
-          focus: false,
-          open: false,
-          filteredItems: this._normalizedItems,
-          filterInputValue: ''
-        });
-	   }
+      inputNode.blur();
+      this.setState({
+        focus: false,
+        open: false,
+        filteredItems: this._normalizedItems,
+        filterInputValue: ''
+      });
+	  }
   }
 
   _handleInputArrowDown(e) {
